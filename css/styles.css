@@ -1,3 +1,4 @@
+// reset
 :root {
     font-size: 1em;
 }
@@ -21,9 +22,15 @@ body {
     color: white;
 }
 
+.container {
+    width: 90vw;
+    margin: 0 auto;
+}
+
+// navbar
 .navbar {
-    background-image: linear-gradient(to right, rgba(237, 102, 99, 1), rgba(181, 43, 101, 1));
-    padding: 1em 2em;
+    background-image: white;
+    padding: 1em 3em;
 }
 
 .menu {
@@ -34,12 +41,21 @@ body {
     display: none;
 }
 
-.menu > li + li{
+.menu > li + li {
     margin-top: 1em;
 }
 
 .menu > li:first-child {
     margin-top: 1.5em;
+}
+
+.menu > li a {
+    color: #B8BECD;
+}
+
+.menu > li a:hover,
+.menu > li a:active {
+    color: #202336;
 }
 
 .active {
@@ -75,10 +91,12 @@ body {
 
     .menu > li + li{
         margin-top: 0;
-        margin-left: 1em;
+        margin-left: 2em;
     }
 
     .menu > li:first-child {
         margin-top: 0;
     }
 }
+
+// hero

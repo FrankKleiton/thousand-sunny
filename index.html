@@ -6,21 +6,24 @@
         <link rel="stylesheet" href="css/styles.css" />
         <title>Landingpage Template</title>
 
-        <script src="https://kit.fontawesome.com/1ac0d76cd1.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <nav class="navbar">
-            <a href="#" class="logo">Template</a>
-            <span class="burger-icon" onclick="openNavbar()">
-                <i class="fas fa-bars"></i>
-            </span>
-            <ul class="menu">
-                <li><a href="#">about us</a></li>
-                <li><a href="#">services</a></li>
-                <li><a href="#">portfolio</a></li>
-                <li><a href="#">contact us</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" id="logo" class="logo">
+                    <img src="./images/logo.svg" alt="logo" />
+                </a>
+                <span class="burger-icon" onclick="openNavbar()">
+                    <i class="fas fa-bars"></i>
+                </span>
+                <ul class="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Destinations</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Partner</a></li>
+                </ul>
+            </nav>
+        </div>
     </body>
     <script>
         function openNavbar() {
@@ -30,8 +33,10 @@
 
         const lis = document.querySelectorAll('.menu li');
 
-        lis.forEach(el => {
+        lis.forEach((el) => {
             el.addEventListener('click', openNavbar);
         });
     </script>
+    <script src="./js/font-awesome.js"></script>
+
 </html>
