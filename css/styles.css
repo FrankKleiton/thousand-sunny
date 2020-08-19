@@ -10,14 +10,20 @@
     src: url('../fonts/PlayfairDisplay-VariableFont_wght.ttf');
 }
 
+@font-face {
+    font-family: 'Muli';
+    src: url('../fonts/Muli-Light.ttf');
+}
+
 :root {
-    font-size: calc(.7em + 1vw);
+    font-size: calc(0.7em + 1vw);
 
     --dark-grey: #202336;
-    --light-grey: #B8BECD;
-    --white: #FFFFFF;
+    --medium-grey: #7d7987;
+    --light-grey: #b8becd;
+    --white: #ffffff;
 
-    --background: var(--white); 
+    --background: var(--white);
     --text: var(--dark-grey);
     --navbar-text: var(--light-grey);
 }
@@ -46,7 +52,20 @@ body {
     margin: 0 auto;
 }
 
- /* navbar */
+/* utils */
+.big {
+    font-size: 2rem;
+}
+
+.medium {
+    font-size: 1.5rem;
+}
+
+.small {
+    font-size: 1rem;
+}
+
+/* navbar */
 .navbar {
     background-image: var(--background);
     padding: 1em 0;
@@ -110,26 +129,56 @@ header {
 }
 
 .heading-1 {
-    font-size: 2rem;
     font-weight: 700;
 }
 
 .heading-2 {
-    font-size: 1rem;
     font-weight: 400;
 }
 
 .hero-container {
-    max-width: 70vw;
+    max-width: 65vw;
     width: 100%;
 }
 
-.hero-image {
+.hero-container > object {
     display: block;
     width: 100%;
     margin: 0 auto;
     margin-top: 3em;
 }
+
+/* Info Section */
+.info-container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.info-image {
+    max-width: 65vw;
+    width: 100%;
+    margin-top: 1em;
+}
+
+.info-image > object {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.content {
+    font: 100 100% 'Muli';
+    color: var(--medium-grey);
+    line-height: 30px;
+    margin-top: 1em;
+}
+
+.info-content > object {
+    display: none;
+}
+
 
 /* Media Querys */
 @media (min-width: 30em) {
@@ -140,7 +189,7 @@ header {
 
 @media (min-width: 50em) {
     :root {
-        font-size: calc(.3em + 1vw);
+        font-size: calc(0.3em + 1vw);
     }
 
     .burger-icon {
@@ -158,7 +207,7 @@ header {
         display: flex;
     }
 
-    .menu > li + li{
+    .menu > li + li {
         margin-top: 0;
         margin-left: 2em;
     }
@@ -176,21 +225,38 @@ header {
         margin-top: -1em;
     }
 
-    .heading-1 {
+    .headings > .heading-1 {
         font-size: 3rem;
     }
 
-    .heading-2 {
+    .headings > .heading-2 {
         font-size: 1.5rem;
     }
-    
+
     .hero-container {
         max-width: 45vw;
     }
 
-    .hero-image {
+    .hero-container > object {
         width: 100%;
         margin-right: -5em;
     }
-    
+
+    .info-container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .info-content {
+        max-width: 50%;
+        margin-left: 4em;
+        position: relative;
+    }
+
+    .info-content > object {
+        display: block;
+        position: absolute;
+        top: -4em;
+        left: 0;
+    }
 }
