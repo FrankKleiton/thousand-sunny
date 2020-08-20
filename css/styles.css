@@ -262,13 +262,9 @@ header {
 }
 
 .card:hover::before {
-    height: 120%;
-    width: 120%;
+    height: 130%;
+    width: 130%;
 }
-
-/* .card:hover::before {
-
-} */
 
 /* Media Querys */
 @media (min-width: 30em) {
