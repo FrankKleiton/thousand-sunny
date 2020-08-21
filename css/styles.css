@@ -19,7 +19,7 @@
     font-size: calc(0.7em + 1vw);
 
     --dark-grey: #202336;
-    --medium-dark-grey: #80918E;
+    --medium-dark-grey: #80918e;
     --medium-grey: #7d7987;
     --light-grey: #b8becd;
     --white: #ffffff;
@@ -200,62 +200,65 @@ header {
     position: relative;
     display: block;
     min-width: 13em;
-    min-height: 16em;;
+    min-height: 16em;
     width: 13em;
     height: 16em;
     margin-bottom: 2em;
-    border-top-right-radius: .5em;
-    border-top-left-radius: .5em;
-    border-bottom-right-radius: .5em;
+    border-top-right-radius: 0.5em;
+    border-top-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
     overflow: hidden;
 }
 
 .card--1 {
-    background: url("../images/card-1.png") top/cover no-repeat;
+    background: url('../images/card-1.png') top/cover no-repeat;
 }
 
 .card--2 {
-    background: url("../images/card-2.png") top/cover no-repeat;
+    background: url('../images/card-2.png') top/cover no-repeat;
 }
 
 .card--3 {
-    background: url("../images/card-3.png") top/cover no-repeat;
+    background: url('../images/card-3.png') top/cover no-repeat;
 }
 
 .card--4 {
-    background: url("../images/card-4.png") top/cover no-repeat;
+    background: url('../images/card-4.png') top/cover no-repeat;
 }
-
 
 .card-info {
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     padding: 1em 1em 0 0;
     border-top-right-radius: 1em;
 }
 
 .card-info > h3 {
     color: var(--dark-grey);
-    font-size: .8rem;
+    font-size: 0.8rem;
 }
 
 .card-info > h4 {
     color: var(--medium-dark-grey);
-    font-size: .7rem;
-    margin-top: .3em;
+    font-size: 0.7rem;
+    margin-top: 0.3em;
 }
 
 .card::before {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     bottom: 0;
     left: 0;
     height: 0;
     width: 0;
-    background: linear-gradient(to right, rgba(9, 132, 94, .7), rgba(54, 209, 164, 1));
+    background: linear-gradient(
+        to right,
+        rgba(9, 132, 94, 0.7),
+        rgba(54, 209, 164, 1)
+    );
     border-top-right-radius: 3em;
     border-bottom-right-radius: 4em;
     transition: 1s ease-out;
@@ -264,6 +267,76 @@ header {
 .card:hover::before {
     height: 130%;
     width: 130%;
+}
+
+.testimonials-container {
+    margin-top: 3em;
+    margin-bottom: 1em;
+}
+
+.testimonials-container > h1 {
+    margin-bottom: 2em;
+}
+
+.testimonials-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stars > object + object {
+    margin-left: 0.5em;
+}
+
+.testimonials-content .content {
+    width: 100%;
+    color: var(--dark-grey);
+    margin-bottom: 2em;
+}
+
+.testimonials-content h4 {
+    margin-bottom: 0.4em;
+}
+
+.testimonials-content .testimonials-content--left {
+    margin-bottom: 3em;
+}
+
+.slider {
+    position: relative;
+    max-height: 28em;
+    width: 20em;
+    overflow: hidden;
+}
+
+.slider ul {
+    display: flex;
+    list-style: none;
+}
+
+.moveRight {
+    background: red;
+}
+
+.slider > .slider-control {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #ffffff;
+}
+
+.slider > .slider-control {
+    padding: 0.7em 0 0 1.5em;
+    border-top-left-radius: 1em;
+}
+
+.slider > .slider-control svg {
+    stroke: #D7D7D7;
+    cursor: pointer;
+}
+
+.slider > .slider-control svg:hover {
+    stroke: #000000;
 }
 
 /* Media Querys */
@@ -344,5 +417,13 @@ header {
         position: absolute;
         top: -4em;
         left: 0;
+    }
+
+    .testimonials-content {
+        flex-direction: row;
+    }
+
+    .testimonials-content .content {
+        width: 80%;
     }
 }
