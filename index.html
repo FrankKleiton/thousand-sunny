@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="css/styles.css" />
         <title>Landingpage Template</title>
     </head>
+
     <body>
         <div class="container">
             <nav class="navbar">
@@ -17,9 +18,9 @@
                 </span>
                 <ul class="menu">
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">Destinations</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Partner</a></li>
+                    <li><a href="#card-container">Destinations</a></li>
+                    <li><a href="#info-container">About</a></li>
+                    <li><a href="#testimonials-container">Testimonials</a></li>
                 </ul>
             </nav>
             <header>
@@ -34,7 +35,7 @@
                 </div>
             </header>
             <main>
-                <div class="info-container">
+                <div id="info-container" class="info-container">
                     <div class="info-image">
                         <object type="image/svg+xml" data="./images/info.svg">
                             Hot air ballons and woman doing skydiving jump
@@ -58,7 +59,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="card-container">
+                <div id="card-container" class="card-container">
                     <h1 class="heading-1 medium">Featured destinations</h1>
                     <div class="cards">
                         <div class="card card--1">
@@ -87,12 +88,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="testimonials-container">
+                <div id="testimonials-container" class="testimonials-container">
                     <h1 class="heading-1 medium">Testimonials</h1>
                     <div class="testimonials-content">
-                        <div
-                            class="testimonials-content--left"
-                        >
+                        <div class="testimonials-content--left">
                             <div class="stars">
                                 <object
                                     type="image/svg+xml"
@@ -138,29 +137,138 @@
                             <div class="slider slider--testimonials">
                                 <ul>
                                     <li>
-                                        <img src="./images/photographer.png" alt="photographer" />
+                                        <img
+                                            src="./images/photographer.png"
+                                            alt="photographer"
+                                        />
                                     </li>
                                     <li>
-                                        <img src="./images/photographer.png" alt="photographer" />
+                                        <img
+                                            src="./images/photographer.png"
+                                            alt="photographer"
+                                        />
                                     </li>
                                 </ul>
                                 <div class="slider-control">
-                                    <svg id="arrow-left" onclick="slide('left')" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M22 25L18 20.5L22 16" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <circle cx="20" cy="20" r="19" transform="rotate(-180 20 20)" stroke="" stroke-width="2"/>
+                                    <svg
+                                        id="arrow-left"
+                                        onclick="slide('left')"
+                                        width="40"
+                                        height="40"
+                                        viewBox="0 0 40 40"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M22 25L18 20.5L22 16"
+                                            stroke=""
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                        <circle
+                                            cx="20"
+                                            cy="20"
+                                            r="19"
+                                            transform="rotate(-180 20 20)"
+                                            stroke=""
+                                            stroke-width="2"
+                                        />
                                     </svg>
-                                        
-                                    <svg id="arrow-right" onclick="slide('right')" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M18 15L22 19.5L18 24" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <circle cx="20" cy="20" r="19" stroke="" stroke-width="2"/>
-                                    </svg>        
+
+                                    <svg
+                                        id="arrow-right"
+                                        onclick="slide('right')"
+                                        width="40"
+                                        height="40"
+                                        viewBox="0 0 40 40"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M18 15L22 19.5L18 24"
+                                            stroke=""
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                        <circle
+                                            cx="20"
+                                            cy="20"
+                                            r="19"
+                                            stroke=""
+                                            stroke-width="2"
+                                        />
+                                    </svg>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    </div>
                 </div>
             </main>
+            <footer>
+                <div class="footer-options">
+                    <div class="columns">
+                        <h4>
+                            <object type="image/svg+xml" data="images/logo.svg">Logo</object>
+                        </h4>
+                        <p class="content">Plan and book your perfect trip with
+                            expert advice, travel tips destination
+                            information from us</p>
+            
+                        <span class="content">©2020 Thousand Sunny. All rights reserved</span>
+                    </div>
+                    <div class="columns">
+                        <h4>Destinations</h4>
+                        <ul class="content">
+                            <li>Africa</li>
+                            <li>Antarctica</li>
+                            <li>Asia</li>
+                            <li>Europe</li>
+                            <li>America</li>
+                        </ul>
+                    </div>
+                    <div class="columns">
+                        <h4>Shop</h4>
+                        <ul class="content">
+                            <li>Destinations Guide</li>
+                            <li>Pictorial & Gifts</li>
+                            <li>Specials Offers</li>
+                            <li>Delivery Times</li>
+                            <li>FAQ'S</li>
+                        </ul>
+                    </div>
+                    <div class="columns">
+                        <h4>Interests</h4>
+                        <ul class="content">
+                            <li>Adventure Travel</li>
+                            <li>Art And Culture</li>
+                            <li>Wildlife And Nature</li>
+                            <li>Family Holidays</li>
+                            <li>Food And Drink</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="social-medias">
+                    <ul>
+                        <li>
+                            <img src="./images/twitter.svg" alt="twitter">
+                        </li>
+                        <li>
+                            <img src="./images/facebook.svg" alt="facebook">
+                        </li>
+                        <li>
+                            <img src="./images/instagram.svg" alt="instagram">
+                        </li>
+                        <li>
+                            <img src="./images/linkedin.svg" alt="linkedin">
+                        </li>
+                        <li>
+                            <img src="./images/youtube.svg" alt="youtube">
+                        </li>
+                    </ul>
+                </div>
+            </footer>
         </div>
     </body>
     <script>

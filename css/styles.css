@@ -27,6 +27,8 @@
     --background: var(--white);
     --text: var(--dark-grey);
     --navbar-text: var(--light-grey);
+
+    --mt: 8em;
 }
 
 *,
@@ -155,6 +157,7 @@ header {
     flex-direction: column-reverse;
     align-items: center;
     justify-content: space-around;
+    margin-top: var(--mt);
 }
 
 .info-image {
@@ -182,7 +185,7 @@ header {
 
 /* Card Section */
 .card-container {
-    margin-top: 3em;
+    margin-top: var(--mt);
 }
 
 .card-container > h1 {
@@ -270,7 +273,8 @@ header {
 }
 
 .testimonials-container {
-    margin-top: 3em;
+    margin-top: var(--mt);
+
     margin-bottom: 1em;
 }
 
@@ -331,13 +335,67 @@ header {
 }
 
 .slider > .slider-control svg {
-    stroke: #D7D7D7;
+    stroke: #d7d7d7;
     cursor: pointer;
 }
 
 .slider > .slider-control svg:hover {
     stroke: #000000;
 }
+
+footer {
+    margin-top: var(--mt);
+}
+
+.footer-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.footer-options .columns {
+    text-align: center;
+    margin-top: 3em;
+}
+
+.footer-options .columns ul {
+    list-style: none;
+}
+
+.footer-options .columns > h4:first-child {
+    margin-bottom: 1em;
+}
+
+.footer-options .columns:first-child > p {
+    margin-bottom: 1em;
+}
+
+.social-medias {
+    padding-bottom: 1.5em;
+}
+
+.social-medias ul {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 3em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+/*
+
+.footer-options .columns {
+    max-width: 15%;
+    font-size: 0.8rem;
+}
+
+.footer-options .columns:first-child {
+    max-width: 25%;
+}
+
+*/
 
 /* Media Querys */
 @media (min-width: 30em) {
@@ -425,5 +483,23 @@ header {
 
     .testimonials-content .content {
         width: 80%;
+    }
+
+    .footer-options {
+        flex-direction: row;
+    }
+
+    .footer-options .columns {
+        max-width: 15%;
+        font-size: 0.8rem;
+        text-align: initial;
+    }
+    
+    .footer-options .columns:first-child {
+        max-width: 25%;
+    }
+
+    .social-medias ul {
+        width: 30%;
     }
 }
